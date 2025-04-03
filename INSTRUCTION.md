@@ -1,3 +1,5 @@
+## Application of all manifests
+Open terminal and change dir `cd .infrastructure` 
 ### Create namespace
 ```
 kubectl apply -f namespace.yml
@@ -22,6 +24,7 @@ kubectl get pods -n todoapp
 ```
 kubectl port-forward -n todoapp todoapp-pod 8080:8080
 ```
+Then open browser and enter or `localhost:8080` - you will see page of app either `localhost:8080/api/ready/` - you will see `ready`
 
 ## Testing via busybox
 Firstly check ip of `todoapp-pod` using command: `kubectl get pods -n todoapp -o wide`.
